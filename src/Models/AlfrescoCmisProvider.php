@@ -1020,18 +1020,7 @@ class AlfrescoCmisProvider
 
 	public function upload($parentId, $documents){
 		
-		$ret=array();
-
-		if(is_array($documents)){
-			foreach($documents as $doc){
-				$ret[]=$this->doUpload($parentId,$doc);
-			}
-			return $ret;
-		}else{
-			return $this->doUpload($parentId,$documents);
-		}
-		
-		return false;
+		return $this->doUpload($parentId,$documents);
 	
 	}
 
