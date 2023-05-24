@@ -994,9 +994,9 @@ class AlfrescoCmisProvider
 				$filetype=$document->getMimeType();
 			}
 		}else{
-			$filename=$doc["name"];
-			$filecontent=file_get_contents($doc["tmp_name"]);
-			$filetype=mime_content_type($doc["tmp_name"]);
+			$filename=$document["name"];
+			$filecontent=file_get_contents($document["tmp_name"]);
+			$filetype=mime_content_type($document["tmp_name"]);
 		}
 
 		//dump($error);
